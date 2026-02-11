@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - Velocity Rentals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">Velocity Rentals</a>
+            </div>
+            <div class="nav-links">
+                 <a href="index.html" class="nav-link">Back to Home</a>
+                 <a href="#" id="logout-btn" class="nav-link nav-btn-outline">Logout</a>
+            </div>
+        </div> </nav>
+
+    <div class="nav-spacer"></div>
+
+    <main class="dashboard-container">
+        <h1>My Dashboard</h1>
+        <p>A summary of your rental history with Velocity Rentals.</p>
+
+        <hr>
+
+        <section class="customer-dashboard">
+            <h2>My Rentals</h2>
+            
+            <div id="my-rentals-list" style="margin-top: 20px;">
+                </div>
+        </section>
+    </main>
+
+    <script src="dashboard.js" defer></script>
+</body>
+</html>

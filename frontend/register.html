@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Car Rental System</title>
+  
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="auth-body"> <a href="index.html" class="auth-back-link">← Back to Home</a>
+
+  <section class="form-container" id="register-container">
+    <h2>Register New Account</h2>
+    
+    <form id="register-form">
+      
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="regFirstName">First Name:</label>
+          <input type="text" id="regFirstName" name="FirstName" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="regLastName">Last Name:</label>
+          <input type="text" id="regLastName" name="LastName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="regEmail">Email:</label>
+          <input type="email" id="regEmail" name="Email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="regPassword">Password:</label>
+          <input type="password" id="regPassword" name="Password" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="regPhone">Phone Number:</label>
+          <input type="tel" id="regPhone" name="PhoneNumber" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="regLicense">Driver's License:</label>
+          <input type="text" id="regLicense" name="DriversLicenseNumber" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="regDOB">Date of Birth:</label>
+          <input type="date" id="regDOB" name="DateOfBirth" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="regAddress">Address:</label>
+          <input type="text" id="regAddress" name="Address" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="regCity">City:</label>
+          <input type="text" id="regCity" name="City" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="regState">State:</label>
+          <input type="text" id="regState" name="State" required>
+        </div>
+      </div> <div class="form-group">
+        <label for="regZipCode">Zip Code:</label>
+        <input type="text" id="regZipCode" name="ZipCode" required>
+      </div>
+  
+      <button type="submit" class="submit-btn">Register</button>
+      
+      <p id="register-message"></p>
+      
+      <p class="auth-switch">
+        Already have an account? <a href="login.html">Login here</a>
+      </p>
+      
+    </form>
+  </section>
+
+  <script src="register.js" defer></script>
+</body>
+</html>

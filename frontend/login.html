@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Car Rental System</title>
+  
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body class="auth-body"> 
+
+  <a href="index.html" class="auth-back-link">← Back to Home</a>
+
+  <section class="form-container" id="login-container">
+    <h2>Login to Your Account</h2>
+    
+    <form id="login-form">
+      
+      <div class="form-group">
+        <label for="loginEmail">Email:</label>
+        <input type="email" id="loginEmail" name="Email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" name="Password" required>
+      </div>
+  
+      <button type="submit" class="submit-btn">Login</button>
+      
+      <p id="login-message"></p>
+      
+      <p class="auth-switch">
+        Don't have an account? <a href="register.html">Register here</a>
+      </p>
+      
+    </form>
+  </section>
+
+  <script src="login.js" defer></script>
+</body>
+</html>

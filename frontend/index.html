@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rental System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <a href="index.html">Velocity Rentals</a>
+    </div>
+    <div class="nav-links">
+      <div id="nav-logged-out">
+        <a href="login.html" class="nav-link">Login</a>
+        <a href="register.html" class="nav-link nav-btn">Register</a>
+      </div>
+      <div id="nav-logged-in">
+        <span id="user-welcome" class="nav-text">Welcome, User!</span>
+        <a href="admin.html" id="nav-admin-link" class="nav-link" style="display: none; color: #d9534f; font-weight: bold;">Admin</a> 
+        <a href="dashboard.html" class="nav-link">Dashboard</a> 
+        <a href="#" id="logout-btn" class="nav-link nav-btn-outline">Logout</a>
+      </div>
+    </div>
+  </div> </nav>
+
+<div class="nav-spacer"></div>
+
+<header class="hero-section">
+  <div class="hero-content">
+    <h1>Find Your Perfect Rental Car</h1>
+    <p>Book from our wide range of premium vehicles at unbeatable prices.</p>
+    <form id="car-search-form">
+      <div class="form-group">
+        <label for="search-location">Location</label>
+        <input type="text" id="search-location" placeholder="Enter a city or airport">
+      </div>
+      <div class="form-group">
+        <label for="search-pickup">Pick-up Date</label>
+        <input type="date" id="search-pickup">
+      </div>
+      <div class="form-group">
+        <label for="search-return">Return Date</label>
+        <input type="date" id="search-return">
+      </div>
+      <button type="submit" class="submit-btn search-btn">Search Cars</button>
+    </form>
+  </div>
+</header>
+
+<main class="page-container">
+  <h2>Available Cars</h2>
+  <div id="car-list-container">
+    <p>Loading available cars...</p>
+  </div>
+</main>
+
+<script src="script.js" defer></script>
+<hr>
+
+</body>
+</html>

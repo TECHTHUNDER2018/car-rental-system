@@ -1,0 +1,1057 @@
+/*
+=================================
+:ROOT (LIGHT THEME)
+=================================
+*/
+:root {
+  --color-bg-primary: #f8f9fa;   /* Light grey background */
+  --color-bg-secondary: #ffffff; /* White cards/nav */
+  --color-bg-tertiary: #f4f4f4;  /* Hover background */
+  
+  --color-text-primary: #2a2a2a;   /* Dark text */
+  --color-text-secondary: #555; /* Grey text */
+  
+  --color-border: #e9ecef; /* Light border color */
+  
+  --color-accent-blue: #007bff;
+  --color-accent-blue-hover: #0056b3;
+  --color-accent-green: #28a745;
+  --color-accent-green-hover: #218838;
+  --color-accent-red: #d9534f;
+  --color-accent-red-hover: #c9302c;
+}
+
+/*
+=================================
+GLOBAL STYLES & RESETS
+=================================
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/*
+=================================
+NAVBAR STYLES (FIXED)
+=================================
+*/
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the new nav-container */
+  align-items: center;
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 2rem; /* Add padding for screen edges */
+}
+
+/* NEW: This container centers your nav content */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Matches your page container width */
+  height: 70px; /* Fixed height for alignment */
+}
+
+
+.nav-spacer {
+  height: 70px;
+}
+
+.nav-brand a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Brush Script MT", "Brush Script Std", cursive;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-brand a:hover {
+  color: var(--color-accent-blue);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+#nav-logged-in {
+  display: none; 
+  align-items: center;
+}
+
+#nav-logged-out {
+  display: flex;
+  align-items: center;
+}
+
+.nav-text {
+  margin-right: 1rem;
+  color: var(--color-text-secondary);
+  font-weight: bold;
+  padding: 0.5rem 1rem; /* Aligns with nav-link */
+}
+
+.nav-link {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--color-bg-tertiary);
+}
+
+.nav-btn {
+  background-color: var(--color-accent-blue);
+  color: #ffffff;
+}
+
+.nav-btn:hover {
+  background-color: var(--color-accent-blue-hover);
+  color: #ffffff;
+}
+
+.nav-btn-outline {
+  background-color: transparent;
+  color: var(--color-accent-blue);
+  border: 1px solid var(--color-accent-blue);
+}
+
+.nav-btn-outline:hover {
+  background-color: var(--color-accent-blue);
+  color: #ffffff;
+}
+
+/*
+=================================
+HERO SECTION STYLES
+=================================
+*/
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem;
+  min-height: 400px;
+  color: #ffffff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+/*
+=================================
+HERO SEARCH FORM STYLES
+=================================
+*/
+#car-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+#car-search-form .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#car-search-form .form-group label {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+#car-search-form .form-group input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: var(--color-text-primary);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#car-search-form .search-btn {
+  padding: 0.75rem 1.5rem;
+  margin-top: 0;
+  height: 47px;
+}
+
+/*
+=================================
+CAR LIST STYLES
+=================================
+*/
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 20px;
+}
+
+.page-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--color-accent-blue);
+  padding-bottom: 0.5rem;
+  display: inline-block; 
+}
+
+#car-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.car-card {
+  background-color: var(--color-bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 10px 20px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  animation: fadeInSlideUp 0.5s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.06), 0 15px 30px rgba(0, 0, 0, 0.06);
+}
+
+.car-card h3 {
+  margin-top: 0;
+  color: var(--color-accent-blue);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.car-card p {
+  margin: 4px 0;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.car-card p strong {
+  color: var(--color-text-primary);
+}
+
+.car-card .price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-accent-blue);
+  text-align: right;
+  margin-top: auto; 
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-now-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-accent-blue);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.book-now-btn:hover {
+  background-color: var(--color-accent-blue-hover);
+  transform: translateY(-2px);
+}
+
+.car-card em {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  color: var(--color-text-secondary);
+  margin-top: auto; 
+  padding: 1.5rem 0 0.5rem 0;
+}
+
+.car-card em a {
+  color: var(--color-accent-blue);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.car-card em a:hover {
+  text-decoration: underline;
+}
+
+/*
+=================================
+FORM STYLES (Generic)
+=================================
+*/
+.form-container {
+  background-color: var(--color-bg-secondary);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  margin-top: 0;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: var(--color-text-secondary);
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  border-radius: 4px;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--color-accent-blue);
+  background-color: var(--color-bg-secondary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: var(--color-accent-blue);
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: var(--color-accent-blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#register-message {
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: 16px;
+}
+
+/*
+=================================
+DASHBOARD CONTAINER (FIXED)
+=================================
+*/
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--color-bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+.dashboard-container h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.dashboard-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--color-accent-blue);
+  padding-bottom: 0.5rem;
+  display: block; 
+}
+
+.back-to-home-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: var(--color-accent-blue);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  float: right;
+}
+
+.back-to-home-btn:hover {
+  background-color: var(--color-accent-blue-hover);
+  transform: translateY(-2px);
+}
+
+/*
+=================================
+AUTH PAGE STYLES (Login/Register)
+=================================
+*/
+
+.auth-body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Light Gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.auth-back-link {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.auth-back-link:hover {
+  color: var(--color-accent-blue);
+}
+
+.auth-body .form-container {
+  max-width: 800px;
+  width: 100%;
+  padding: 2.5rem; 
+  animation: authFadeIn 0.5s ease-out;
+  margin-bottom: 0;
+  background-color: var(--color-bg-secondary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.auth-body #login-container {
+    max-width: 450px;
+}
+
+@keyframes authFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-body .form-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--color-text-primary);
+}
+
+.auth-body .form-group input {
+  padding: 12px;
+  font-size: 1rem;
+  background-color: var(--color-bg-primary); /* Use light inputs */
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+.auth-switch a {
+  color: var(--color-accent-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+#login-message,
+#register-message {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+/*
+=================================
+ADMIN DASHBOARD LAYOUT (FIXED)
+=================================
+*/
+
+.admin-body {
+  display: flex;
+  background-color: var(--color-bg-primary);
+}
+
+.admin-sidebar {
+  width: 250px;
+  background-color: var(--color-bg-secondary);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+  transition: width 0.3s ease;
+  z-index: 1000;
+}
+
+.admin-main-content {
+  margin-left: 250px; /* Same as sidebar width */
+  flex-grow: 1;
+  padding: 2.5rem;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar-brand {
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+.sidebar-brand a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Brush Script MT", "Brush Script Std", cursive;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.sidebar-brand a:hover {
+  color: var(--color-accent-blue);
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.sidebar-menu .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  margin: 0.25rem 0.5rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.sidebar-menu .nav-link i {
+  width: 30px;
+  font-size: 1.1rem;
+}
+
+.sidebar-menu .nav-link:hover {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+}
+
+.sidebar-menu .nav-link.active {
+  background-color: var(--color-accent-blue);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.sidebar-footer {
+  padding: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+.sidebar-footer .nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.sidebar-footer .nav-link i {
+  width: 25px;
+}
+.sidebar-footer .nav-link:hover {
+  background-color: var(--color-bg-tertiary);
+}
+
+.admin-page {
+  display: none;
+  animation: pageFadeIn 0.5s ease-out;
+}
+.admin-page.active-page {
+  display: block;
+}
+
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.admin-main-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-top: 0;
+}
+.admin-main-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  border-bottom: 3px solid var(--color-accent-blue);
+  padding-bottom: 0.5rem;
+  display: block;
+}
+.admin-main-content p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+}
+.admin-main-content hr {
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  margin: 2rem 0;
+}
+
+.stat-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background-color: var(--color-bg-secondary);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+.stat-card:nth-child(1) .stat-icon { background-color: rgba(40, 167, 69, 0.2); color: #28a745; }
+.stat-card:nth-child(2) .stat-icon { background-color: rgba(0, 123, 255, 0.2); color: #007bff; }
+.stat-card:nth-child(3) .stat-icon { background-color: rgba(255, 193, 7, 0.2); color: #ffc107; }
+.stat-card:nth-child(4) .stat-icon { background-color: rgba(23, 162, 184, 0.2); color: #17a2b8; }
+
+.stat-info p {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+.stat-info h3 {
+  font-size: 1.75rem;
+  margin: 0.25rem 0 0 0;
+  color: var(--color-text-primary);
+}
+
+/* =================================
+FIXED: DASHBOARD & ADMIN TABLE STYLES
+=================================
+*/
+
+
+.dashboard-container table,
+.admin-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  table-layout: auto; 
+}
+.dashboard-container tbody,
+.admin-page tbody {
+  animation: fadeInSlideUp 0.5s ease-out;
+}
+.dashboard-container th,
+.dashboard-container td,
+.admin-page th,
+.admin-page td {
+  padding: 16px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  word-wrap: break-word; 
+}
+.dashboard-container th,
+.admin-page th {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.dashboard-container tr:nth-child(even),
+.admin-page tr:nth-child(even) {
+  background-color: var(--color-bg-secondary); 
+}
+.dashboard-container tr:last-child td,
+.admin-page tr:last-child td {
+  border-bottom: none;
+}
+
+/* 6. Admin Action Buttons */
+#fetch-active-rentals-btn,
+#fetch-all-users-btn {
+  background-color: var(--color-accent-green);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem; 
+}
+
+#fetch-active-rentals-btn:hover,
+#fetch-all-users-btn:hover {
+  background-color: var(--color-accent-green-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.admin-edit-btn,
+.admin-delete-btn {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  margin: 0 2px;
+}
+
+.admin-edit-btn {
+  background-color: var(--color-accent-blue);
+  color: white;
+}
+.admin-edit-btn:hover {
+  background-color: var(--color-accent-blue-hover);
+}
+
+.admin-delete-btn {
+  background-color: var(--color-accent-red);
+  color: white;
+}
+.admin-delete-btn:hover {
+  background-color: var(--color-accent-red-hover);
+}
+
+.return-btn {
+  background-color: var(--color-accent-red);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.return-btn:hover {
+  background-color: var(--color-accent-red-hover);
+  transform: translateY(-1px);
+}
+
+/*
+=================================
+ADMIN EDIT MODAL STYLES
+=================================
+*/
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: var(--color-bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  animation: modalSlideIn 0.4s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.modal-close-btn {
+  color: var(--color-text-secondary);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  color: var(--color-text-primary);
+}
+
+.modal-content .form-group {
+  margin-bottom: 1rem;
+}
+
+.modal-content select {
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  border-radius: 4px;
+  font-size: 1em;
+  width: 100%;
+}
+/*
+=================================
+NEW: ADMIN OVERVIEW EXTENSIONS
+=================================
+*/
+
+/* New Stat Card Icon Colors */
+.stat-card:nth-child(5) .stat-icon { background-color: rgba(217, 83, 79, 0.2); color: #d9534f; }
+.stat-card:nth-child(6) .stat-icon { background-color: rgba(108, 117, 125, 0.2); color: #6c757d; }
+.stat-card:nth-child(7) .stat-icon { background-color: rgba(240, 173, 78, 0.2); color: #f0ad4e; }
+
+/* 2-Column Layout */
+.admin-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem; 
+}
+.admin-col-7 {
+  width: 60%;
+  padding: 0 1rem;
+}
+.admin-col-5 {
+  width: 40%;
+  padding: 0 1rem;
+}
+
+/* Chart Container */
+.chart-container {
+  background-color: var(--color-bg-secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Make columns stack on small screens */
+@media (max-width: 992px) {
+  .admin-col-7,
+  .admin-col-5 {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+
+
+
+/*
+=================================
+ADMIN CAR MANAGEMENT STYLES
+=================================
+*/
+
+
+#add-car-btn {
+  background-color: var(--color-accent-blue);
+  width: 200px;
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease;
+  display: flex; /* ADDED */
+  align-items: center; /* ADDED */
+  justify-content: center; /* ADDED */
+  gap: 0.5rem; /* ADDED */
+}
+#add-car-btn:hover {
+  background-color: var(--color-accent-blue-hover);
+}
+
+
+#car-modal .modal-content {
+  max-width: 700px; /* Make it a bit wider */
+}
+
+
+.status-btn {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  margin: 0 2px;
+  color: white;
+}
+.status-btn.available {
+  background-color: var(--color-accent-green);
+}
+.status-btn.available:hover {
+  background-color: var(--color-accent-green-hover);
+}
+.status-btn.maintenance {
+  background-color: var(--color-text-secondary);
+}
+.status-btn.maintenance:hover {
+  background-color: var(--color-text-primary);
+  color: var(--color-bg-secondary);
+}
