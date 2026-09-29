@@ -549,7 +549,6 @@ This project is open source and available for educational purposes.
 - Verify API endpoint URLs match backend configuration
 - Check CORS settings if running on different ports
 
-  contributed a fork to update dbms management
 
 ## 📧 Support
 
